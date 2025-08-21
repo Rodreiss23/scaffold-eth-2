@@ -126,6 +126,13 @@ const config: HardhatUserConfig = {
       url: "https://alfajores-forno.celo-testnet.org",
       accounts: [deployerPrivateKey],
     },
+    // Intuition EVM testnet (fill the env vars below)
+    intuition: {
+      url: process.env.INTUITION_RPC_URL || "https://YOUR-INTUITION-RPC-URL",
+      // Optional chain id if you know it; leave undefined if unknown
+      chainId: process.env.INTUITION_CHAIN_ID ? parseInt(process.env.INTUITION_CHAIN_ID) : undefined,
+      accounts: [deployerPrivateKey],
+    },
   },
   // Configuration for harhdat-verify plugin
   etherscan: {
