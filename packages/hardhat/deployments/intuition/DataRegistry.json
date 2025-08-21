@@ -1,0 +1,259 @@
+{
+  "address": "0xA931eB21f5FCbae9c32c2fA4507D4Afbf80f450e",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "submitter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "data",
+          "type": "string"
+        }
+      ],
+      "name": "DataSubmitted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRecord",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "submitter",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "data",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_submitter",
+          "type": "address"
+        }
+      ],
+      "name": "getRecordIdsBySubmitter",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nextRecordId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_data",
+          "type": "string"
+        }
+      ],
+      "name": "submitData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "recordId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x5915c299cb154b5016b9091a3896096fa27e7d727a8d1be1ba5af21d1e74649c",
+  "receipt": {
+    "to": null,
+    "from": "0xa88D90ac6F1929F39caFaf7db4E2b99e9A229dd8",
+    "contractAddress": "0xA931eB21f5FCbae9c32c2fA4507D4Afbf80f450e",
+    "transactionIndex": 1,
+    "gasUsed": "413160",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x5e89d87f39673f9ea473ff3b20949c551284afaa38e255d4a1bbfb09fbac4145",
+    "transactionHash": "0x5915c299cb154b5016b9091a3896096fa27e7d727a8d1be1ba5af21d1e74649c",
+    "logs": [],
+    "blockNumber": 722189,
+    "cumulativeGasUsed": "413160",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "4c13e002a5972ec9b511838947e0b9c4",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"submitter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"data\",\"type\":\"string\"}],\"name\":\"DataSubmitted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getRecord\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"submitter\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"data\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_submitter\",\"type\":\"address\"}],\"name\":\"getRecordIdsBySubmitter\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nextRecordId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_data\",\"type\":\"string\"}],\"name\":\"submitData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"recordId\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"submitData(string)\":{\"params\":{\"_data\":\"Arbitrary string payload to store on-chain.\"},\"returns\":{\"recordId\":\"The id assigned to the stored record.\"}}},\"title\":\"DataRegistry\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getRecord(uint256)\":{\"notice\":\"Get a record by id.\"},\"getRecordIdsBySubmitter(address)\":{\"notice\":\"Get all record ids submitted by an address.\"},\"submitData(string)\":{\"notice\":\"Submit a new string record to the registry.\"}},\"notice\":\"A simple on-chain registry where users can submit and store arbitrary string data. Each submission is assigned an auto-incrementing identifier.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/DataRegistry.sol\":\"DataRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/DataRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/**\\n * @title DataRegistry\\n * @notice A simple on-chain registry where users can submit and store arbitrary string data.\\n * Each submission is assigned an auto-incrementing identifier.\\n */\\ncontract DataRegistry {\\n    struct Record {\\n        address submitter;\\n        uint256 timestamp;\\n        string data;\\n    }\\n\\n    // Incremental identifier for records\\n    uint256 public nextRecordId = 0;\\n\\n    // id => Record\\n    mapping(uint256 => Record) private idToRecord;\\n\\n    // submitter => list of their record ids\\n    mapping(address => uint256[]) private submitterToRecordIds;\\n\\n    event DataSubmitted(uint256 indexed id, address indexed submitter, string data);\\n\\n    /**\\n     * @notice Submit a new string record to the registry.\\n     * @param _data Arbitrary string payload to store on-chain.\\n     * @return recordId The id assigned to the stored record.\\n     */\\n    function submitData(string calldata _data) external returns (uint256 recordId) {\\n        recordId = nextRecordId;\\n        idToRecord[recordId] = Record({submitter: msg.sender, timestamp: block.timestamp, data: _data});\\n        submitterToRecordIds[msg.sender].push(recordId);\\n        nextRecordId += 1;\\n\\n        emit DataSubmitted(recordId, msg.sender, _data);\\n    }\\n\\n    /**\\n     * @notice Get a record by id.\\n     */\\n    function getRecord(uint256 _id) external view returns (address submitter, uint256 timestamp, string memory data) {\\n        Record storage r = idToRecord[_id];\\n        return (r.submitter, r.timestamp, r.data);\\n    }\\n\\n    /**\\n     * @notice Get all record ids submitted by an address.\\n     */\\n    function getRecordIdsBySubmitter(address _submitter) external view returns (uint256[] memory) {\\n        return submitterToRecordIds[_submitter];\\n    }\\n}\\n\\n\",\"keccak256\":\"0x979092a2adb382558a0f0a6eff1e106bee4bf1763aa5fcf6a070cf9688b259c5\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610678806100246000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806303e9e609146100515780631f4de01b1461007c578063a2aac7ab1461009c578063dbde207d146100bd575b600080fd5b61006461005f366004610329565b6100c6565b60405161007393929190610342565b60405180910390f35b61008f61008a3660046103a7565b61018f565b60405161007391906103d7565b6100af6100aa36600461041b565b6101fb565b604051908152602001610073565b6100af60005481565b600081815260016020819052604082208054918101546002820180548594606094936001600160a01b0390911692909181906101019061048d565b80601f016020809104026020016040519081016040528092919081815260200182805461012d9061048d565b801561017a5780601f1061014f5761010080835404028352916020019161017a565b820191906000526020600020905b81548152906001019060200180831161015d57829003601f168201915b50505050509050935093509350509193909250565b6001600160a01b0381166000908152600260209081526040918290208054835181840281018401909452808452606093928301828280156101ef57602002820191906000526020600020905b8154815260200190600101908083116101db575b50505050509050919050565b6000805490506040518060600160405280336001600160a01b0316815260200142815260200184848080601f016020809104026020016040519081016040528093929190818152602001838380828437600092018290525093909452505083815260016020818152604092839020855181546001600160a01b0319166001600160a01b0390911617815590850151918101919091559083015190915060028201906102a6908261052c565b50503360009081526002602090815260408220805460018181018355918452918320909101849055815490925081906102e09084906105ec565b9091555050604051339082907f44c61fd17e57b81ca5e1615d6386f752dfe280ab0c29be7c7973c3618ba006b39061031b9087908790610613565b60405180910390a392915050565b60006020828403121561033b57600080fd5b5035919050565b60018060a01b038416815260006020848184015260606040840152835180606085015260005b8181101561038457858101830151858201608001528201610368565b506000608082860101526080601f19601f83011685010192505050949350505050565b6000602082840312156103b957600080fd5b81356001600160a01b03811681146103d057600080fd5b9392505050565b6020808252825182820181905260009190848201906040850190845b8181101561040f578351835292840192918401916001016103f3565b50909695505050505050565b6000806020838503121561042e57600080fd5b823567ffffffffffffffff8082111561044657600080fd5b818501915085601f83011261045a57600080fd5b81358181111561046957600080fd5b86602082850101111561047b57600080fd5b60209290920196919550909350505050565b600181811c908216806104a157607f821691505b6020821081036104c157634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052604160045260246000fd5b601f82111561052757600081815260208120601f850160051c810160208610156105045750805b601f850160051c820191505b8181101561052357828155600101610510565b5050505b505050565b815167ffffffffffffffff811115610546576105466104c7565b61055a81610554845461048d565b846104dd565b602080601f83116001811461058f57600084156105775750858301515b600019600386901b1c1916600185901b178555610523565b600085815260208120601f198616915b828110156105be5788860151825594840194600190910190840161059f565b50858210156105dc5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b8082018082111561060d57634e487b7160e01b600052601160045260246000fd5b92915050565b60208152816020820152818360408301376000818301604090810191909152601f909201601f1916010191905056fea2646970667358221220b982d9ca511c957ed29afd0e798c184df75a2a2d559f1ee0d9bd3bfe8ea488c564736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806303e9e609146100515780631f4de01b1461007c578063a2aac7ab1461009c578063dbde207d146100bd575b600080fd5b61006461005f366004610329565b6100c6565b60405161007393929190610342565b60405180910390f35b61008f61008a3660046103a7565b61018f565b60405161007391906103d7565b6100af6100aa36600461041b565b6101fb565b604051908152602001610073565b6100af60005481565b600081815260016020819052604082208054918101546002820180548594606094936001600160a01b0390911692909181906101019061048d565b80601f016020809104026020016040519081016040528092919081815260200182805461012d9061048d565b801561017a5780601f1061014f5761010080835404028352916020019161017a565b820191906000526020600020905b81548152906001019060200180831161015d57829003601f168201915b50505050509050935093509350509193909250565b6001600160a01b0381166000908152600260209081526040918290208054835181840281018401909452808452606093928301828280156101ef57602002820191906000526020600020905b8154815260200190600101908083116101db575b50505050509050919050565b6000805490506040518060600160405280336001600160a01b0316815260200142815260200184848080601f016020809104026020016040519081016040528093929190818152602001838380828437600092018290525093909452505083815260016020818152604092839020855181546001600160a01b0319166001600160a01b0390911617815590850151918101919091559083015190915060028201906102a6908261052c565b50503360009081526002602090815260408220805460018181018355918452918320909101849055815490925081906102e09084906105ec565b9091555050604051339082907f44c61fd17e57b81ca5e1615d6386f752dfe280ab0c29be7c7973c3618ba006b39061031b9087908790610613565b60405180910390a392915050565b60006020828403121561033b57600080fd5b5035919050565b60018060a01b038416815260006020848184015260606040840152835180606085015260005b8181101561038457858101830151858201608001528201610368565b506000608082860101526080601f19601f83011685010192505050949350505050565b6000602082840312156103b957600080fd5b81356001600160a01b03811681146103d057600080fd5b9392505050565b6020808252825182820181905260009190848201906040850190845b8181101561040f578351835292840192918401916001016103f3565b50909695505050505050565b6000806020838503121561042e57600080fd5b823567ffffffffffffffff8082111561044657600080fd5b818501915085601f83011261045a57600080fd5b81358181111561046957600080fd5b86602082850101111561047b57600080fd5b60209290920196919550909350505050565b600181811c908216806104a157607f821691505b6020821081036104c157634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052604160045260246000fd5b601f82111561052757600081815260208120601f850160051c810160208610156105045750805b601f850160051c820191505b8181101561052357828155600101610510565b5050505b505050565b815167ffffffffffffffff811115610546576105466104c7565b61055a81610554845461048d565b846104dd565b602080601f83116001811461058f57600084156105775750858301515b600019600386901b1c1916600185901b178555610523565b600085815260208120601f198616915b828110156105be5788860151825594840194600190910190840161059f565b50858210156105dc5787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b8082018082111561060d57634e487b7160e01b600052601160045260246000fd5b92915050565b60208152816020820152818360408301376000818301604090810191909152601f909201601f1916010191905056fea2646970667358221220b982d9ca511c957ed29afd0e798c184df75a2a2d559f1ee0d9bd3bfe8ea488c564736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "submitData(string)": {
+        "params": {
+          "_data": "Arbitrary string payload to store on-chain."
+        },
+        "returns": {
+          "recordId": "The id assigned to the stored record."
+        }
+      }
+    },
+    "title": "DataRegistry",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getRecord(uint256)": {
+        "notice": "Get a record by id."
+      },
+      "getRecordIdsBySubmitter(address)": {
+        "notice": "Get all record ids submitted by an address."
+      },
+      "submitData(string)": {
+        "notice": "Submit a new string record to the registry."
+      }
+    },
+    "notice": "A simple on-chain registry where users can submit and store arbitrary string data. Each submission is assigned an auto-incrementing identifier.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 12,
+        "contract": "contracts/DataRegistry.sol:DataRegistry",
+        "label": "nextRecordId",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 17,
+        "contract": "contracts/DataRegistry.sol:DataRegistry",
+        "label": "idToRecord",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_uint256,t_struct(Record)9_storage)"
+      },
+      {
+        "astId": 22,
+        "contract": "contracts/DataRegistry.sol:DataRegistry",
+        "label": "submitterToRecordIds",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_uint256)dyn_storage": {
+        "base": "t_uint256",
+        "encoding": "dynamic_array",
+        "label": "uint256[]",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_uint256)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_struct(Record)9_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct DataRegistry.Record)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Record)9_storage"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Record)9_storage": {
+        "encoding": "inplace",
+        "label": "struct DataRegistry.Record",
+        "members": [
+          {
+            "astId": 4,
+            "contract": "contracts/DataRegistry.sol:DataRegistry",
+            "label": "submitter",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 6,
+            "contract": "contracts/DataRegistry.sol:DataRegistry",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 8,
+            "contract": "contracts/DataRegistry.sol:DataRegistry",
+            "label": "data",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
