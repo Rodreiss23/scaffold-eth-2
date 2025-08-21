@@ -1,3 +1,4 @@
+import { intuition } from "./utils/chains/intuition";
 import * as chains from "viem/chains";
 
 export type ScaffoldConfig = {
@@ -13,7 +14,7 @@ export const DEFAULT_ALCHEMY_API_KEY = "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.hardhat],
+  targetNetworks: [chains.hardhat, intuition],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)
@@ -28,8 +29,7 @@ const scaffoldConfig = {
   // If you want to use a different RPC for a specific network, you can add it here.
   // The key is the chain ID, and the value is the HTTP RPC URL
   rpcOverrides: {
-    // Example:
-    // [chains.mainnet.id]: "https://mainnet.buidlguidl.com",
+    13579: process.env.NEXT_PUBLIC_INTUITION_RPC_URL || "https://testnet.rpc.intuition.systems/http",
   },
 
   // This is ours WalletConnect's default project ID.
