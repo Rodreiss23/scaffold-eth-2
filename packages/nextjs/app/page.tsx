@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <div className="px-5 w-full max-w-5xl">
           <h1 className="text-center">
             <span className="block text-2xl md:text-3xl mb-3">Welcome to</span>
-            <span className="block text-4xl md:text-6xl font-bold tracking-tight">Scaffold-ETH 2</span>
+            <span className="block text-4xl md:text-6xl font-bold tracking-tight">REPTUITION</span>
           </h1>
 
           <p className="mt-4 text-center text-base md:text-lg text-base-content/80 max-w-2xl mx-auto">
