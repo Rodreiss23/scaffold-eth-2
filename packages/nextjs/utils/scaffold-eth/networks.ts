@@ -140,6 +140,16 @@ export function getBlockExplorerAddressLink(network: chains.Chain, address: stri
 export function getTargetNetworks(): ChainWithAttributes[] {
   return scaffoldConfig.targetNetworks.map(targetNetwork => ({
     ...targetNetwork,
+    // Override native currency for local development to TRUST
+    ...(targetNetwork.id === chains.hardhat.id
+      ? {
+          nativeCurrency: {
+            ...targetNetwork.nativeCurrency,
+            name: "TRUST",
+            symbol: "TRUST",
+          },
+        }
+      : {}),
     ...NETWORKS_EXTRA_DATA[targetNetwork.id],
   }));
 }
