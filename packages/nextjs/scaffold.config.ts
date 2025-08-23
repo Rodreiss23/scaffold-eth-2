@@ -11,9 +11,24 @@ export type ScaffoldConfig = {
 
 export const DEFAULT_ALCHEMY_API_KEY = "oKxs-03sij-U_N0iOlrSsZFr29-IqbuF";
 
+// Custom Intuition Testnet chain
+const intuitionTestnet = {
+  ...chains.sepolia,
+  id: 13579,
+  name: "Intuition Testnet",
+  nativeCurrency: { name: "TRUST", symbol: "TRUST", decimals: 18 },
+  rpcUrls: {
+    default: { http: ["https://testnet.rpc.intuition.systems"] },
+    public: { http: ["https://testnet.rpc.intuition.systems"] },
+  },
+  blockExplorers: {
+    default: { name: "Intuition Explorer", url: "https://testnet.explorer.intuition.systems/" },
+  },
+} as const satisfies chains.Chain;
+
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.hardhat],
+  targetNetworks: [chains.hardhat, intuitionTestnet],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)
