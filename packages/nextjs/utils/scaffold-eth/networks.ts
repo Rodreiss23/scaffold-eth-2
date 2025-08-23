@@ -153,3 +153,19 @@ export function getTargetNetworks(): ChainWithAttributes[] {
     ...NETWORKS_EXTRA_DATA[targetNetwork.id],
   }));
 }
+
+// Provide a custom chain definition for Intuition testnet so it can be consumed by wagmi if needed
+export const intuitionTestnetChain: ChainWithAttributes = {
+  ...chains.sepolia,
+  id: 13579,
+  name: "Intuition Testnet",
+  nativeCurrency: { name: "TRUST", symbol: "TRUST", decimals: 18 },
+  rpcUrls: {
+    default: { http: ["https://testnet.rpc.intuition.systems"] },
+    public: { http: ["https://testnet.rpc.intuition.systems"] },
+  },
+  blockExplorers: {
+    default: { name: "Intuition Explorer", url: "https://testnet.explorer.intuition.systems/" },
+  },
+  color: "#7c3aed",
+};
