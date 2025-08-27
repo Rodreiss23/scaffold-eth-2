@@ -3,7 +3,6 @@
 import Link from "next/link";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
@@ -11,58 +10,65 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="flex items-center flex-col grow pt-10">
-        <div className="px-5">
-          <h1 className="text-center">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
-          </h1>
-          <div className="flex justify-center items-center space-x-2 flex-col">
-            <p className="my-2 font-medium">Connected Address:</p>
-            <Address address={connectedAddress} />
+      <div className="flex min-h-screen flex-col">
+        {/* Gradient Hero */}
+        <section className="relative isolate overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-cyan-500 text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
+          <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-28">
+            <div className="text-center">
+              <p className="mb-3 text-sm uppercase tracking-widest opacity-80">REPTUITION</p>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                Stake TRUST. Earn REP.
+              </h1>
+              <p className="mt-5 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+                A simple, gas-efficient staking experience on Intuition Testnet.
+              </p>
+              <div className="mt-8 flex items-center justify-center gap-3">
+                <Link href="/debug" passHref className="btn btn-primary btn-lg normal-case">
+                  Open dApp
+                </Link>
+                <Link href="/blockexplorer" passHref className="btn btn-outline btn-lg normal-case">
+                  View Explorer
+                </Link>
+              </div>
+              <div className="mt-8 flex items-center justify-center">
+                <div className="rounded-xl bg-white/10 px-5 py-3 backdrop-blur">
+                  <span className="mr-2 text-white/70">Connected:</span>
+                  <Address address={connectedAddress} />
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
-          </p>
-        </div>
+        </section>
 
-        <div className="grow bg-base-300 w-full mt-16 px-8 py-12">
-          <div className="flex justify-center items-center gap-12 flex-col md:flex-row">
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <BugAntIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contracts
-                </Link>{" "}
-                tab.
-              </p>
-            </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Explore your local transactions with the{" "}
-                <Link href="/blockexplorer" passHref className="link">
-                  Block Explorer
-                </Link>{" "}
-                tab.
-              </p>
+        {/* Features */}
+        <section className="bg-base-100">
+          <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              <div className="rounded-2xl border border-base-300 bg-base-200 p-6">
+                <h3 className="text-lg font-semibold">Stake TRUST</h3>
+                <p className="mt-2 opacity-80">Deposit native TRUST and start accruing REP instantly.</p>
+                <Link href="/debug" className="btn btn-sm btn-primary mt-4">
+                  Stake Now
+                </Link>
+              </div>
+              <div className="rounded-2xl border border-base-300 bg-base-200 p-6">
+                <h3 className="text-lg font-semibold">Earn REP</h3>
+                <p className="mt-2 opacity-80">Claim REP rewards at a fixed emission rate per stake.</p>
+                <Link href="/debug" className="btn btn-sm btn-secondary mt-4">
+                  Claim Rewards
+                </Link>
+              </div>
+              <div className="rounded-2xl border border-base-300 bg-base-200 p-6">
+                <h3 className="text-lg font-semibold">Explore</h3>
+                <p className="mt-2 opacity-80">Audit transactions and logs on the built-in explorer.</p>
+                <Link href="/blockexplorer" className="btn btn-sm btn-outline mt-4">
+                  Open Explorer
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

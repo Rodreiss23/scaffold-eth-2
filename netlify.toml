@@ -1,0 +1,4 @@
+[build]
+  base = "packages/nextjs"
+  command = "yarn build && npx next export -o out"
+  publish = "packages/nextjs/out"

@@ -68,9 +68,7 @@ export const Footer = () => {
             </div>
             <span>·</span>
             <div className="text-center">
-              <a href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" target="_blank" rel="noreferrer" className="link">
-                Support
-              </a>
+              <span className="opacity-80">Built on Intuition Testnet (v0.app)</span>
             </div>
           </div>
         </ul>

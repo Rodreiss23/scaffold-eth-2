@@ -110,6 +110,11 @@ const config: HardhatUserConfig = {
       url: "https://sepolia.base.org",
       accounts: [deployerPrivateKey],
     },
+    intuitionTestnet: {
+      url: "https://testnet.rpc.intuition.systems",
+      chainId: 13579,
+      accounts: [deployerPrivateKey],
+    },
     scrollSepolia: {
       url: "https://sepolia-rpc.scroll.io",
       accounts: [deployerPrivateKey],
